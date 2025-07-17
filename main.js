@@ -1,9 +1,3 @@
-function save(){
-    let tk = document.getElementById("tkInput").value;
-    document.cookie = "tk=" + tk + "; path=/; max-age=31536000; secure; SameSite=Strict";
-    alert("TK saved successfully!");
-}
-
 
 function load(){
     let cookies = document.cookie.split(';');
@@ -55,7 +49,7 @@ function loadLastSave() {
         }
     }
     if(lastSave){
-        document.getElementById("last").innerText = "Last save: " + lastSave + "tk"+ document.getElementById("tkInput").value;
+        document.getElementById("last").innerText = "Last save: " + lastSave ;
     } else {
         document.getElementById("last").innerText = "No previous save found.";
     }
