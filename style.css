@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e9ecef; /* Moved from .continer to body for full background */
+}
+
+.continer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #e9ecef; REMOVED as it's now on body */
+    border-radius: 10px;
+}
+
+.card{
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px; /* Added a fixed width for better appearance */
+    margin-bottom: 20px;
+}
+
+.card h1 {
+    margin: 0;
+    color: #343a40;
+}
+
+.input{
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Added margin-bottom for spacing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Space between buttons */
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
