@@ -57,3 +57,32 @@ function loadLastSave() {
 setInterval(() => {
     loadLastSave();
 }, interval = 1000);
+
+function about(){
+    let tkText = document.getElementById("currentBalance").innerText;
+    let tk = parseFloat(tkText.replace('৳', '').replace(/,/g, ''));
+    let level = 0;
+    if (tk <= 500){
+        level = 1;
+    }
+    else if ( tk>= 1000){
+        level = 2;
+    }
+    else if (tk >= 10000 && tk < 20000){
+        level = 3;
+    }
+    else if (tk >= 20000 && tk < 50000){
+        level = 4;
+    }
+    else if (tk >= 50000){
+        level = 5;
+    }
+    document.getElementById("lavel").innerText = "Your level is: " + level;
+}
+setInterval(() => {
+    about();
+}, 1000);
+
+function printPage() {
+    window.print();
+}

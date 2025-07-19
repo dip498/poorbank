@@ -1,8 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     margin: 0;
     background-color: #e9ecef; /* Moved from .continer to body for full background */
@@ -23,7 +20,7 @@ body {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 200px; /* Added a fixed width for better appearance */
+    width: 50%; /* Added a fixed width for better appearance */
     margin-bottom: 20px;
 }
 
@@ -33,7 +30,7 @@ body {
 }
 
 .input{
-    width: calc(100% - 22px); /* Account for padding and border */
+    width: calc(50% - 22px); /* Account for padding and border */
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 5px;
@@ -56,4 +53,22 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+#about{
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Consistent width with .card */
+    margin-bottom: 20px; /* Space below the about section */
+    
+}
+header{
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
 }
