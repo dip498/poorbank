@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POOR BANK PHONE [BETA]</title>
+    <title>Poor Bank</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h3>POOR BANK PHONE [BETA]</h1>
+        <h1>Poor Bank</h1>
     </header>
-    <div class="continer">
+    <main class="container">
         <div class="card">
-            <h1 id="currentBalance">৳0.00</h1>
+            <h2 id="currentBalance">৳0.00</h2>
+            <p id="last">Last update: Never</p>
         </div>
-        <input type="number" class="input" id="tkInput" placeholder="Enter your tk">
-        <button id="loadTkBtn" onclick="addtk()">➕Save Tk</button>
-        <button id="print" onclick="printPage()">🖨️print</button>
-        <h4 id="last"> last save</h4>
+        <div class="controls">
+            <input type="number" class="input" id="tkInput" placeholder="Enter amount">
+            <button id="saveBtn">➕ Save</button>
+            <button id="withdrawBtn">➖ Withdraw</button>
+            <button id="printBtn">🖨️ Print</button>
+        </div>
         <div id="about">
-        <h3 id="lavel"></h3>
-    </div>
-    </div>
+            <h3 id="level">Your level is: 0</h3>
+        </div>
+    </main>
     
-    <script src="main.js"></script>
+    <!-- main.js ফাইলটিকে একটি module হিসেবে লোড করা হচ্ছে -->
+    <script src="main.js" type="module"></script>
 </body>
 </html>

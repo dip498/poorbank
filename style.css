@@ -1,74 +1,135 @@
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    background-color: #e9ecef; /* Moved from .continer to body for full background */
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.continer{
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #dddfe2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* Main Container */
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    /* background-color: #e9ecef; REMOVED as it's now on body */
-    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    box-sizing: border-box;
 }
 
-.card{
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Card Styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 50%; /* Added a fixed width for better appearance */
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
-.card h1 {
+.card h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.card p {
     margin: 0;
-    color: #343a40;
+    color: #606770;
+    font-size: 0.9rem;
 }
 
-.input{
-    width: calc(50% - 22px); /* Account for padding and border */
-    padding: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px; /* Added margin-bottom for spacing */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+/* Controls (Input and Buttons) */
+.controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
 button {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 0.75rem 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px; /* Space between buttons */
-    transition: background-color 0.2s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
     background-color: #0056b3;
 }
-#about{
-    margin-top: 20px;
-    text-align: center;
-    background-color: #f8f9fa;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px; /* Consistent width with .card */
-    margin-bottom: 20px; /* Space below the about section */
-    
+
+button:active {
+    transform: scale(0.98);
 }
-header{
-    background-color: #343a40;
-    color: white;
-    padding: 10px 20px;
+
+/* Specific button colors */
+#withdrawBtn {
+    background-color: #dc3545; /* Red for withdraw */
+}
+#withdrawBtn:hover {
+    background-color: #c82333;
+}
+#printBtn {
+    background-color: #6c757d; /* Gray for print */
+}
+#printBtn:hover {
+    background-color: #5a6268;
+}
+
+/* About/Level Section */
+#about {
     text-align: center;
-    border-radius: 10px 10px 0 0;
+    background-color: #e7f3ff;
+    color: #0056b3;
+    padding: 0.75rem;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#about h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
 }
