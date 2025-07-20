@@ -18,9 +18,7 @@ function load() {
     if (cookie) {
         let value = cookie.split('=')[1];
         document.getElementById('show').innerHTML = value;
-    } else {
-        alert('No taka found');
-    }
+    } 
 }
 setInterval(() => {
     load();
