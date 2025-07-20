@@ -41,7 +41,5 @@ function withdraw() {
         let newValue = parseFloat(currentValue) - parseFloat(tk);
         document.cookie = `taka=${newValue}; path=/; max-age=31536000`;
         alert(`Withdrawn ${tk} taka successfully`);
-    } else {
-        alert('No taka found');
-    }
+    } 
 }
