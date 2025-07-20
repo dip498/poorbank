@@ -10,7 +10,9 @@ function save(){
         let currentValue = sumtaka.split('=')[1];
         let newValue = parseFloat(currentValue) + parseFloat(tk);
         document.cookie = `taka=${newValue}; path=/; max-age=31536000`;
-    } 
+    } else {
+        document.cookie = `taka=${parseFloat(tk)}; path=/; max-age=31536000`; // Initialize if not found
+    }
 
 }
 function load() {
@@ -18,7 +20,10 @@ function load() {
     if (cookie) {
         let value = cookie.split('=')[1];
         document.getElementById('show').innerHTML = value;
-    } 
+    } else {
+        document.cookie = "taka=0; path=/; max-age=31536000"; // Initialize taka to 0 if not found
+        document.getElementById('show').innerHTML = "00.00"; // Update display immediately
+    }
 }
 setInterval(() => {
     load();
@@ -41,5 +46,7 @@ function withdraw() {
         let newValue = parseFloat(currentValue) - parseFloat(tk);
         document.cookie = `taka=${newValue}; path=/; max-age=31536000`;
         alert(`Withdrawn ${tk} taka successfully`);
-    } 
+    } else {
+        alert('No balance to withdraw from.'); // Handle case where cookie doesn't exist
+    }
 }
