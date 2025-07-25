@@ -49,4 +49,12 @@ function withdraw() {
     } else {
         alert('No balance to withdraw from.'); // Handle case where cookie doesn't exist
     }
+   
 }
+function about(){
+        document.getElementById('taka').innerHTML= "Taka: " + document.cookie.split('; ').find(row => row.startsWith('taka=')).split('=')[1]
+        document.getElementById('lavel').innerHTML= "Level: "
+    }
+    setInterval(() => {
+        about();
+    }, 1000);
