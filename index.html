@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h2>Poor Bank Phone</h2>
+        <h2>Poor Bank Phone <sup style="font-size: small;">1.0</sup></h2>
     </header>
     <div id="continer">
         <div id="cards">
@@ -19,8 +19,12 @@
         </div>
          <input type="number" placeholder="Enter your account number" id="tk" />
     <div class="buttons">
-    <button onclick="save()">save Balance</button>
-    <button onclick="withdraw()">Withdraw</button>
+    <button onclick="save()">
+        <img src="SAVE.png" alt="Save" />
+    </button>
+    <button onclick="withdraw()">
+        <img src="witdrow.png" alt="Withdraw" />
+    </button>
     </div>
             <h3>About</h3>
     <div class="about">
@@ -29,8 +33,12 @@
         <h4 id="ststus"></h4>
         <h4 id="turget"></h4>
         <h4 id="euro"></h4>
+        <h4 id="%"></h4>
     </div>
     </div>
+    <footer>
+        <p>© 2025 Poor Bank. All rights reserved.</p>
+        <p>Developed by DIP SARKER</p>
    
     <script src="main.js"></script>
 </body>
