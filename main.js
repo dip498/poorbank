@@ -114,6 +114,8 @@ function about(){
     document.getElementById('%').innerHTML = "Percentage: " + persent.toFixed(2) + "%";
     let euro = taka / 141.96; 
     document.getElementById('euro').innerHTML = "Euro: " + euro.toFixed(2) + "€";
+    let ber= document.getElementById('ber');
+    ber.style.width = persent + "%";
     
 }
     document.getElementById('taka').innerHTML= "Taka: " + document.cookie.split('; ').find(row => row.startsWith('taka=')).split('=')[1]
