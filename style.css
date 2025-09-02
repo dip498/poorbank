@@ -1,22 +1,30 @@
 #cards{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+    box-shadow: #333 0px 0px 10px;
 
 }
 input[type="number"] {
-    width: 200px;
+    width: 105%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: #333 0px 0px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 5%;
+    
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-image: url(bg.gif);
+    background-size: cover;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -35,9 +43,7 @@ button {
     text-align: center;
     align-items: center;
     border-radius: 1000%;
-
-
-
+    box-shadow: #333 0px 0px 10px;
 }
 p{
     font-size: 20px;
@@ -55,7 +61,28 @@ header {
     padding: 10px 0;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: slideDown 1s ease-in-out;
+    box-shadow: #333 0px 0px 10px;
+    
 }
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+#logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
 .about {
     width: 100%;
     background-color: #f0f0f0;
@@ -74,6 +101,7 @@ h3 {
     gap: 10px;
     margin-top: 20px;
 }
+
 footer {
     width: 100%;
     background-color: #007bff;

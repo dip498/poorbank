@@ -112,8 +112,8 @@ function about(){
     }
     let persent = (taka / per) * 100;
     document.getElementById('%').innerHTML = "Percentage: " + persent.toFixed(2) + "%";
-    let euro = taka / 141.96; 
-    document.getElementById('euro').innerHTML = "Euro: " + euro.toFixed(2) + "€";
+    let prc = taka / 160.9; 
+    document.getElementById('prc').innerHTML = "PRC: " + prc.toFixed(2);
     let ber= document.getElementById('ber');
     ber.style.width = persent + "%";
     
